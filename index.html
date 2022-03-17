@@ -1,16 +1,37 @@
+HTML:
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>DAXoppgave V2</title>
-        <meta name="description" content="Forsøk 2!">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <title>DAX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body {
+            display: block;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kasper!</h1>
+    <form onsubmit="welcome()">
+        <label>Input :D</label>
+        <input id="userInput" type="text">
+    </form>
+        <h3 id="nameField">Skriv inn navnet ditt for å få noe her!</h3>
+        <h1 id="clockField">Hei</h1>
         
-        
-        <script src="" async defer></script>
-    </body>
+
+    <script src="/app.js"></script>
+</body>
+
 </html>
