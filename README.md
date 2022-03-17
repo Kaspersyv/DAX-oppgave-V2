@@ -26,10 +26,10 @@
   <a href="https://github.com/github_username/repo_name">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">DAX Oppgave V2</h3>
 
   <p align="center">
-    project_description
+    Full score er målet!
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
