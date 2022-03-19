@@ -9,17 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="text/stylesheet" href="/.style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1>Kasper!</h1>
-    <form id="storageTest" onSubmit="return false">
+    <h1 id="nameField">Velkommen!</h1>
+    <form id="storageTest" onSubmit="return false; addEntry();">
         <label>Input :D</label>
         <input id="userInput" type="text">
     </form>
-        <h3 id="nameField">Skriv inn navnet ditt for å få noe her!</h3>
+        <h3>Skriv inn navnet ditt for å få noe på toppen av nettsiden!</h3>
         <h1 id="clockField">Hei</h1>
+
+        <div id="listContainer">
+            
+        </div>
+
+
         
 
     <script src="./script.js"></script>

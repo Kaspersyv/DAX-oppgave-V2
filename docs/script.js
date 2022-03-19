@@ -1,15 +1,60 @@
 const userInput = document.getElementById("userInput")
 const finalInput = JSON.stringify(userInput)
-
 let userField = document.getElementById("userInput");
+let userList = localStorage.getItem("userList");
+
+userInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        addEntry();
+    }
+});
+
 
 if (sessionStorage.getItem("autosave")) {
     userField.value = sessionStorage.getItem("autosave");
 }
 
+// EXPERIMENTS
+function addEntry() {
+  
+
+
+
+
+
+var existingLocal = JSON.parse(localStorage.getItem("allNames"));
+if(existingLocal == null) {existingLocal = []}
+
+var entryName = document.getElementById("userInput").value;
+localStorage.setItem("entry", JSON.stringify(entryName));
+existingLocal.push(entryName);
+localStorage.setItem("allNames", JSON.stringify(existingLocal));
+console.log("Function called");
+let localLength = (JSON.parse(localStorage.getItem("allNames")).length);
+console.log(JSON.parse(localStorage.getItem("allNames")));
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// /EXPERIMENTS
+
+
+
 userField.addEventListener("change", function(){
     sessionStorage.setItem("autosave", userField.value);
-    console.log(sessionStorage.getItem("autosave"));
+    
+    document.getElementById("nameField").innerText = "Velkommen, vi ønsker deg alt som er godt, " + (sessionStorage.getItem("autosave")) + "!";
 })
 
 
@@ -29,8 +74,6 @@ const checkMinute = () => {
     }
 
 }
-
-
 
 
 window.setInterval(checkMinute, 1000);
