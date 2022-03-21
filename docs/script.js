@@ -15,41 +15,29 @@ if (sessionStorage.getItem("autosave")) {
     userField.value = sessionStorage.getItem("autosave");
 }
 
-// EXPERIMENTS
+
 function addEntry() {
-  
 
+    var existingLocal = JSON.parse(localStorage.getItem("allNames"));
+    if(existingLocal == null) {existingLocal = []}
 
-
-
-
-var existingLocal = JSON.parse(localStorage.getItem("allNames"));
-if(existingLocal == null) {existingLocal = []}
-
-var entryName = document.getElementById("userInput").value;
-localStorage.setItem("entry", JSON.stringify(entryName));
-existingLocal.push(entryName);
-localStorage.setItem("allNames", JSON.stringify(existingLocal));
-console.log("Function called");
-let localLength = (JSON.parse(localStorage.getItem("allNames")).length);
-console.log(JSON.parse(localStorage.getItem("allNames")));
-
-
-
-
-
+    var entryName = document.getElementById("userInput").value;
+    localStorage.setItem("entry", JSON.stringify(entryName));
+    existingLocal.push(entryName);
+    localStorage.setItem("allNames", JSON.stringify(existingLocal));
+    console.log("Function called");
+    let localLength = (JSON.parse(localStorage.getItem("allNames")).length);
+    let parsedUsers = JSON.parse(localStorage.getItem("allNames"))
+    console.log(parsedUsers);
+    parsedUsers.forEach(function(user) {
+        let listitem = document.createElement("li");
+        let text = document.createTextNode(user);
+        listitem.appendChild(text);
+        let htmlList = document.getElementById("usersHere");
+        htmlList.appendChild(listitem);
+    
+})
 }
-
-
-
-
-
-
-
-
-
-// /EXPERIMENTS
-
 
 
 userField.addEventListener("change", function(){
