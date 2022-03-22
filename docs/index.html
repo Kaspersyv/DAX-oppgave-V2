@@ -8,17 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <!-- Felt for å skrive SessionStorage navnet -->
     <h1 id="nameField">Velkommen!</h1>
-    <form id="storageTest" onSubmit="return false; addEntry();">
+
+    <!-- Stopper refresh ved å returnere false, kaller addEntry funksjonen -->
+    <div id="inputStyle">
+    <form onSubmit="return false; addEntry();">
         <label>Input :D</label>
+        <!-- Venter på Enter input av bruker -->
         <input id="userInput" type="text">
     </form>
+    </div>
         <h3>Skriv inn navnet ditt for å få noe på toppen av nettsiden!</h3>
+
+        <!-- Input for lykketall fra bruker -->
         <h1 id="clockField">Hei</h1>
 
         <br>
@@ -29,6 +39,8 @@
         <h2>Takk til alle som har besøkt min nettside!</h2>
         <h3>Takk til:</h3>
 
+
+        <!-- Her kommer listen fra localstorage med alle som har besøkt -->
         <div id="listContainer">
             <ul id="usersHere">
 
