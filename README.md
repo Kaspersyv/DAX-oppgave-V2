@@ -14,4 +14,4 @@ Noen av funksjonene inkludert i denne oppgaven er LocalStorage og SessionStorage
 Dette prosjektet bruker [MIT](https://opensource.org/licenses/MIT) lisenset
 
 ## Domenenavn
-Klikk [her](dax.thekasper.xyz)
+Klikk [her](https://dax.thekasper.xyz)
