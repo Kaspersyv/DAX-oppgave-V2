@@ -1,6 +1,11 @@
-const userInput = document.getElementById("userInput")
+
+//Input feltet i HTML
+const userInput = document.getElementById("userInput");
+
+//String versjon av brukerens input
 const finalInput = JSON.stringify(userInput)
-let userField = document.getElementById("userInput");
+
+//
 let userList = localStorage.getItem("userList");
 
 userInput.addEventListener("keyup", function(event) {
@@ -11,7 +16,7 @@ userInput.addEventListener("keyup", function(event) {
 
 
 if (sessionStorage.getItem("autosave")) {
-    userField.value = sessionStorage.getItem("autosave");
+    userInput.value = sessionStorage.getItem("autosave");
 }
 
 
@@ -40,8 +45,8 @@ function addEntry() {
 }
 
 
-userField.addEventListener("change", function(){
-    sessionStorage.setItem("autosave", userField.value);
+userInput.addEventListener("change", function(){
+    sessionStorage.setItem("autosave", userInput.value);
     
     document.getElementById("nameField").innerText = "Velkommen, vi ønsker deg alt som er godt, " + (sessionStorage.getItem("autosave")) + "!";
 });

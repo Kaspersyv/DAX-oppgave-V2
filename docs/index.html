@@ -6,12 +6,16 @@
     <meta charset="utf-8">
     <title>DAX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Montserrat:wght@100;300;400;500;700;900&family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inspiration&family=
+        Montserrat:wght@100;300;400;500;700;900&family=Palette+Mosaic&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -21,35 +25,35 @@
 
     <!-- Stopper refresh ved å returnere false, kaller addEntry funksjonen -->
     <div id="inputStyle">
-    <form onSubmit="return false; addEntry();">
-        <label>Input :D</label>
-        <!-- Venter på Enter input av bruker -->
-        <input id="userInput" type="text">
-    </form>
+        <form onSubmit="return false; addEntry();">
+            <label>Input :D</label>
+            <!-- Venter på Enter input av bruker -->
+            <input id="userInput" type="text">
+        </form>
     </div>
-        <h3>Skriv inn navnet ditt for å få noe på toppen av nettsiden!</h3>
+    <h3>Skriv inn navnet ditt for å få noe på toppen av nettsiden!</h3>
 
-        <!-- Input for lykketall fra bruker -->
-        <h1 id="clockField">Hei</h1>
+    <!-- Input for lykketall fra bruker -->
+    <h1 id="clockField">Hei</h1>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Takk til alle som har besøkt min nettside!</h2>
-        <h3>Takk til:</h3>
-
-
-        <!-- Her kommer listen fra localstorage med alle som har besøkt -->
-        <div id="listContainer">
-            <ul id="usersHere">
-
-            </ul>
-        </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Takk til alle som har besøkt min nettside!</h2>
+    <h3>Takk til:</h3>
 
 
-        
+    <!-- Her kommer listen fra localstorage med alle som har besøkt -->
+    <div id="listContainer">
+        <ul id="usersHere">
+
+        </ul>
+    </div>
+
+
+
 
     <script src="./script.js" async defer></script>
 </body>
