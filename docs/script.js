@@ -5,7 +5,6 @@ let userList = localStorage.getItem("userList");
 
 userInput.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
-        console.log("Enter!")
         addEntry();
     }
 });
@@ -26,17 +25,18 @@ function addEntry() {
     existingLocal.push(entryName);
     localStorage.setItem("allNames", JSON.stringify(existingLocal));
     console.log("Function called");
-    let localLength = (JSON.parse(localStorage.getItem("allNames")).length);
+    // BRUKER IKKE, MEN ER NYTTIG: let localLength = (JSON.parse(localStorage.getItem("allNames")).length);
     let parsedUsers = JSON.parse(localStorage.getItem("allNames"))
     console.log(parsedUsers);
     parsedUsers.forEach(function(user) {
-        let listitem = document.createElement("li");
-        let text = document.createTextNode(user);
-        listitem.appendChild(text);
-        let htmlList = document.getElementById("usersHere");
-        htmlList.appendChild(listitem);
+    let listitem = document.createElement("li");
+    listitem.classList.add("styling");
+    let text = document.createTextNode(user);
+    listitem.appendChild(text);
+    let htmlList = document.getElementById("usersHere");
+    htmlList.appendChild(listitem);
     
-})
+});
 }
 
 
@@ -44,7 +44,7 @@ userField.addEventListener("change", function(){
     sessionStorage.setItem("autosave", userField.value);
     
     document.getElementById("nameField").innerText = "Velkommen, vi ønsker deg alt som er godt, " + (sessionStorage.getItem("autosave")) + "!";
-})
+});
 
 
 
@@ -58,7 +58,7 @@ const checkMinute = () => {
     let randomNumber = Math.floor(Math.random() * 8) + 1;
     thisMinute = new Date().getMinutes();
     if (thisMinute !== lastMinute) {
-        lastMinute = thisMinute
+        lastMinute = thisMinute;
         document.getElementById("clockField").innerText = "Ditt lykketall er: " + randomNumber
     }
 
@@ -66,4 +66,4 @@ const checkMinute = () => {
 
 
 window.setInterval(checkMinute, 1000);
-document.getElementById("clockField").innerText = "Your lucky number is: " + firstRandom
+document.getElementById("clockField").innerText = "Your lucky number is: " + firstRandom;
